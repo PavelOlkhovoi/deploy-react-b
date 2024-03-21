@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Public demo b!!!
+          Public demo B new deploy
         </a>
       </header>
     </div>
