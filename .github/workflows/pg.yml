@@ -25,5 +25,5 @@ jobs:
         run: ls -la
       - name: Build app
         run: npm run build
-      - name: List current folder
+      - name: List
         run: ls -la
