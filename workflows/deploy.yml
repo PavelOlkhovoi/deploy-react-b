@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - test-d
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -15,7 +15,10 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v3
-
+      
+      - name: Switch to test-d branch
+        run: git checkout test-d
+        
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
