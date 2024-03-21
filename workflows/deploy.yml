@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - deploy-react-b
+      - test-d
   pull_request:
 
 jobs:
