@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Deploy B default!
+          Deploy B edited!
         </a>
       </header>
     </div>
