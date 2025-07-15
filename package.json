@@ -14,9 +14,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy" : "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-        "test": "react-scripts test",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^13.13.1",
     "gh-pages": "^6.1.1"
   }
 }
