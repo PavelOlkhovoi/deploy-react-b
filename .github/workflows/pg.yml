@@ -18,12 +18,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "20"
+          cache: 'npm'
 
-      - name: Clean install
+      - name: Clean environment
         run: |
           rm -rf node_modules
           rm -rf ~/.cache/Cypress
-          npm clean-install
+          rm -rf ./node_modules/.cache
+          npm cache clean --force
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline=false
 
       - name: List current folder
         run: ls -la
@@ -40,6 +45,7 @@ jobs:
         with:
           browser: chrome
           wait-on: 'http://localhost:3000'
+          install: false
 
       - name: Deploy A
         uses: peaceiris/actions-gh-pages@v3
